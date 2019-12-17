@@ -58,6 +58,8 @@
       }
     } else if (/\/(_pulls|pullrequests)/i.test(window.location.pathname)) {
       sortPullRequestDashboard();
+    } else if (/\/(_wiki\/wikis)\//i.test(window.location.pathname)) {
+      addWikiRatingUI();
     }
 
     applyNicerScrollbars();
@@ -448,6 +450,11 @@
       });
     });
   }
+
+  // Add a button to toggle flagging a PR discussion thread for ASW "Code of the Day" blog posts.
+  function addWikiRatingUI() {
+    console.log('We are going to add a wiki rating UI soon');
+  }  
 
   // The func we'll call to continuously sort new PRs into categories, once initialization is over.
   let sortEachPullRequestFunc = () => { };
